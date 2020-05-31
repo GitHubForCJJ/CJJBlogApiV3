@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CJJ_BlogApiV3.ILogic\CJJ_BlogApiV3.ILogic.csproj" />
+    <ProjectReference Include="..\CJJ_BlogApiV3.IRepository\CJJ_BlogApiV3.IRepository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Go.StandardUtility.Common">
+      <HintPath>..\DLL\Go.StandardUtility.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Go.StandardUtility.Enum">
+      <HintPath>..\DLL\Go.StandardUtility.Enum.dll</HintPath>
+    </Reference>
+    <Reference Include="Go.StandardUtility.Tool">
+      <HintPath>..\DLL\Go.StandardUtility.Tool.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>E:\allblog\BlogAPI_V3\CJJ_BlogApiV3\CJJ_BlogApiV3.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.1.2" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CJJ.log4netCore\CJJ.log4netCore.csproj" />
+    <ProjectReference Include="..\CJJ_BlogApiV3.ILogic\CJJ_BlogApiV3.ILogic.csproj" />
+    <ProjectReference Include="..\CJJ_BlogApiV3.Logic\CJJ_BlogApiV3.Logic.csproj" />
+    <ProjectReference Include="..\CJJ_BlogApiV3.Model\CJJ_BlogApiV3.Model.csproj" />
+    <ProjectReference Include="..\CJJ_BlogApiV3.Repository\CJJ_BlogApiV3.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Go.StandardUtility.Common">
+      <HintPath>..\DLL\Go.StandardUtility.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Go.StandardUtility.Enum">
+      <HintPath>..\DLL\Go.StandardUtility.Enum.dll</HintPath>
+    </Reference>
+    <Reference Include="Go.StandardUtility.Tool">
+      <HintPath>..\DLL\Go.StandardUtility.Tool.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+</Project>

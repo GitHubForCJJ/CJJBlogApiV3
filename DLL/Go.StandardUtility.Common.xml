@@ -1,0 +1,1653 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Go.StandardUtility.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Go.StandardUtility.Common.Code.Common">
+            <summary>
+            公用类
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.Common.CreateRandomSeed">
+            <summary>
+            随机种子
+            </summary>
+            <returns>结构</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.Common.Calc(System.DateTime,System.DateTime)">
+            <summary>
+            计算时间相差月份
+            </summary>
+            <param name="d1">d1</param>
+            <param name="d2">d2</param>
+            <returns>结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.Common.ReplaceSql(System.String)">
+            <summary>
+            替换1=1 And 语句
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.Common.CellphoneMask(System.String)">
+            <summary>
+            手机号打码
+            </summary>
+            <param name="phoneNumber">原手机号</param>
+            <returns>打码后的手机号</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.Common.IsCellphone(System.String)">
+            <summary>
+            验证是否手机号
+            </summary>
+            <param name="phoneNumber">手机号</param>
+            <returns>正确的手机号=true</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.ConvertExtension">
+            <summary>
+            类型转化扩展
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.ConvertExtension.ConvertHelper(System.Object,System.Type)">
+            <summary>
+            The convert helper.
+            </summary>
+            <param name="value">
+            The value.
+            </param>
+            <param name="conversionType">
+            The conversion type.
+            </param>
+            <returns>
+            The <see cref="T:System.Object"/>.
+            </returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.ConvertExtension.ConvertToDecimalNull(System.Object)">
+            <summary>
+            The convert to decimal null.
+            </summary>
+            <param name="targetObj">
+            The target obj.
+            </param>
+            <returns>
+            The <see cref="T:System.Decimal"/>.
+            </returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.ConvertExtension.ConvertToIntNull(System.Object)">
+            <summary>
+            The convert to int null.
+            </summary>
+            <param name="targetObj">
+            The target obj.
+            </param>
+            <returns>
+            The <see cref="T:System.Int32"/>.
+            </returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.ConvertExtension.Toint(System.Object)">
+            <summary>
+            toint 返回0或int值
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.ConvertExtension.ConvertToString(System.Object)">
+            <summary>
+            The convert to string.
+            </summary>
+            <param name="obj">
+            The obj.
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.ConvertExtension.ListToDataTable``1(System.Collections.Generic.List{``0})">
+            <summary>
+            将泛类型集合List类转换成DataTable
+            </summary>
+            <param name="entitys">泛类型集合</param>
+            <typeparam name="T">T</typeparam>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.ConvertExtension.ConvertBusinessAccountToWalletOutAccount(System.Boolean,System.Boolean,System.Int32,System.Boolean)">
+            <summary>
+            业务系统账号ID转换 适应于资金平台ID规则 只分3总规则 V会员或员工 S商家 Z平台 G供应
+            </summary>
+            <param name="isMemberOrEmployee">是否为会员 或 员工 对应类型V</param>
+            <param name="isSupplier">非会员情况下 是否是商家</param>
+            <param name="accountID">账号ID会员的时候传会员UserID,公司时传CompanyID,商家时传商家ID</param>
+            <param name="isSupply">是否供应商</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.ConvertExtension.BuilderOrderID(System.Int32,System.Int32,Go.StandardUtility.Enum.BusinessType,System.String)">
+            <summary>
+            生成订单号 格式 yyyyMMddHHmm机器编号程序编号业务编号自定义编号(8位)6位随机数
+            此方法已作废 请勿调用 新订单号使用OrderHelper生成 24位
+            </summary>
+            <param name="machineNo">机器编号 1-99</param>
+            <param name="projectNo">程序编号 1-99</param>
+            <param name="bussinessType">枚举业务类型</param>
+            <param name="customNo">自定义编号 8位 多余的只取前8位,不足的左边补0</param>
+            <returns>BuilderOrderID.</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.CustomException">
+            <summary>
+            自定义异常
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.CustomException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Go.StandardUtility.Common.Code.CustomException"/> class.
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.CustomException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Go.StandardUtility.Common.Code.CustomException"/> class.
+            </summary>
+            <param name="message">
+            The message.
+            </param>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.CustomException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Go.StandardUtility.Common.Code.CustomException"/> class.
+            </summary>
+            <param name="message">
+            The message.
+            </param>
+            <param name="inner">
+            The inner.
+            </param>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.GZipHelper">
+            <summary>
+            GZipHelper
+            </summary>	
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.GZipHelper.GZipCompressString(System.String)">
+            <summary>
+            将传入字符串以GZip算法压缩后，返回Base64编码字符
+            </summary>
+            <param name="rawString">需要压缩的字符串</param>
+            <returns>压缩后的Base64编码的字符串</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.GZipHelper.Compress(System.Byte[])">
+            <summary>
+            GZip压缩
+            </summary>
+            <param name="rawData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.GZipHelper.GZipDecompressString(System.String)">
+            <summary>
+            将传入的二进制字符串资料以GZip算法解压缩
+            </summary>
+            <param name="zippedString">经GZip压缩后的二进制字符串</param>
+            <returns>原始未压缩字符串</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.GZipHelper.Decompress(System.Byte[])">
+            <summary>
+            ZIP解压
+            </summary>
+            <param name="zippedData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.KeyIdFactory">
+            <summary>
+            主键工厂类
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Code.KeyIdFactory._lastIdentity">
+            <summary>
+            Fields
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Code.KeyIdFactory._lastIdentityTrain">
+            <summary>
+            Fields
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Code.KeyIdFactory.LockerTrain">
+            <summary>
+            locker
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Code.KeyIdFactory.Locker">
+            <summary>
+            locker
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.KeyIdFactory.NewKeyId">
+            <summary>
+            新的主键ID
+            </summary>
+            <returns>主键ID</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.KeyIdFactory.NewKeyId(System.DateTime)">
+            <summary>
+            新的主键ID
+            </summary>
+            <returns>主键ID</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.KeyIdFactory.NewKeyId(System.String)">
+            <summary>
+            新的主键ID
+            </summary>
+            <param name="code">业务码</param>
+            <returns>主键ID</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.KeyIdFactory.NewKeyId(System.Int32,System.Nullable{System.DateTime})">
+            <summary>
+            新的主键ID
+            </summary>
+            <param name="length">ID长度(不能小于24)</param>
+            <param name="time">创建时间</param>
+            <returns>主键ID</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.KeyIdFactory.NewKeyId(System.String,System.Int32)">
+            <summary>
+            新的主键ID
+            </summary>
+            <param name="code">业务码</param>
+            <param name="length">ID长度(不能小于24)</param>
+            <returns>主键ID</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.KeyIdFactory.NewTrainKeyId(System.Int32,System.Nullable{System.DateTime})">
+            <summary>
+            新的主键ID
+            </summary>
+            <param name="length">ID长度(不能小于24)</param>
+            <param name="time">创建时间</param>
+            <returns>主键ID</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.MyMath">
+            <summary>
+            MyMath
+            </summary>	
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.MyMath.AvgSplit(System.Decimal,System.UInt32)">
+            <summary>
+            均分总额，若不能均分则将余数加到最后一个上面
+            </summary>
+            <param name="totalSum">总额</param>
+            <param name="count">要均分的份数</param>
+            <returns>均分结果集合</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.MyMath.Rounded(System.Decimal,System.Int32)">
+            <summary>
+            四舍五入
+            </summary>
+            <param name="value">值</param>
+            <param name="precision">精度</param>
+            <returns>结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.MyMath.Floor(System.Decimal,System.Int32)">
+            <summary>
+            全舍
+            </summary>
+            <param name="value">值</param>
+            <param name="precision">精度</param>
+            <returns>结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.MyMath.Ceiling(System.Decimal,System.Int32)">
+            <summary>
+            全入
+            </summary>
+            <param name="value">值</param>
+            <param name="precision">精度</param>
+            <returns>结果</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.MyOperator">
+            <summary>
+            算数运算符重载扩展
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Go.StandardUtility.Common.Code.MyOperator.LogicAnd(System.Int32,System.Int32,System.Int32)" -->
+        <member name="T:Go.StandardUtility.Common.Code.Paging">
+            <summary>
+            分页类
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Code.Paging.pageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.Paging.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Code.Paging.pageSize">
+            <summary>
+            页大小
+            </summary>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.Paging.PageSize">
+            <summary>
+            页大小(默认10页)
+            </summary>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.Paging.RowsCount">
+            <summary>
+            总条数
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Code.Paging.pageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.Paging.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Code.Paging.getRowsCount">
+            <summary>
+            是否获取总条数
+            </summary>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.Paging.GetRowsCount">
+            <summary>
+            是否获取总条数
+            </summary>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.Paging.StratRows">
+            <summary>
+            开始索引
+            </summary>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.QueryResult`1">
+            <summary>
+            The query result.
+            </summary>
+            <typeparam name="T">
+            T
+            </typeparam>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.QueryResult`1.#ctor(Go.StandardUtility.Common.Code.Paging,System.Collections.Generic.IList{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Go.StandardUtility.Common.Code.QueryResult`1"/> class.
+            </summary>
+            <param name="paging">
+            The paging.
+            </param>
+            <param name="data">
+            The data.
+            </param>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.QueryResult`1.Paging">
+            <summary>
+            分页信息
+            </summary>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.QueryResult`1.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.QueueBase">
+            <summary>
+            队列轮循
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Code.QueueBase.timer">
+            <summary>
+            时间控件
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.QueueBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Go.StandardUtility.Common.Code.QueueBase"/> class.
+            </summary>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.QueueBase.Interval">
+            <summary>
+            时间间隔
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.QueueBase.ThreadProc">
+            <summary>
+            轮循的线程函数
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.QueueBase.GetProgramName">
+            <summary>
+            获取程序名称
+            </summary>
+            <returns>默认为空</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.QueueBase.GetTaskLogPath">
+            <summary>
+            获取调度执行日志地址
+            </summary>
+            <returns>调度执行日志地址</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.QueueBase.GetExceptionLogPath">
+            <summary>
+            获取调度异常日志地址
+            </summary>
+            <returns>调度异常日志地址</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.QueueBase.Start">
+            <summary>
+            开始函数
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.QueueBase.Stop">
+            <summary>
+            停止函数
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.QueueBase.timer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            timer执行事件
+            </summary>
+            <param name="sender">sender</param>
+            <param name="e">e</param>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.RandomHelper">
+            <summary>
+            RandomHelper
+            </summary>	
+        </member>
+        <member name="F:Go.StandardUtility.Common.Code.RandomHelper.rnd">
+            <summary>
+            初始化全局唯一随机数种子
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.RandomHelper.Next(System.Int32,System.Int32)">
+            <summary>
+            获取一个随机数
+            </summary>
+            <param name="min">最小值</param>
+            <param name="max">最大值</param>
+            <returns>随机数</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.RandomHelper.Next">
+            <summary>
+            获取一个随机数
+            </summary>
+            <returns>随机数</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.Result">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.Result.IsSucceed">
+            <summary>
+            成功/失败
+            </summary>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.Result.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.Result.ErrorCode">
+            <summary>
+            错误码，0=无错误
+            </summary>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.Result`1">
+            <summary>
+            处理结果
+            </summary>
+            <typeparam name="T">扩展数据</typeparam>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.Result`1.Data">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.UrlHelper">
+            <summary>
+            URL辅助类
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.UrlHelper.Get(System.String)">
+            <summary>
+            获取url中指定参数的值
+            </summary>
+            <param name="paramName">参数名称</param>
+            <returns>参数值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.UrlHelper.Set(System.String,System.String)">
+            <summary>
+            添加,更新url中指定参数的值
+            </summary>
+            <param name="paramName">参数名称</param>
+            <param name="val">参数值</param>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.UrlHelper.Remove(System.String)">
+            <summary>
+            移除URL中指定参数的值
+            </summary>
+            <param name="paramName"></param>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.UrlHelper.Clear">
+            <summary>
+            清空所有参数
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.UrlHelper.BuildUrl">
+            <summary>
+            生成url
+            </summary>
+            <returns>url</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.UrlHelper.UrlEncode">
+            <summary>
+            Url编码
+            </summary>
+            <returns>结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.UrlHelper.UrlDecode">
+            <summary>
+            Url解码
+            </summary>
+            <returns>结果</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Code.UrlSafeBase64">
+            <summary>
+            可在URL上传输的安全base64编码
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Code.UrlSafeBase64.base64Code">
+            <summary>
+            偏移量
+            </summary>
+        </member>
+        <member name="P:Go.StandardUtility.Common.Code.UrlSafeBase64._base64Code">
+            <summary>
+            偏移量
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.UrlSafeBase64.Encode(System.Int64)">
+            <summary>
+            编码
+            </summary>
+            <param name="val">要编码的值</param>
+            <returns>编码后的值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Code.UrlSafeBase64.Decode(System.String)">
+            <summary>
+            解码
+            </summary>
+            <param name="val">要解码的值</param>
+            <returns>解码后的值</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Encrypt.AES">
+            <summary>
+            AES
+            </summary>	
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.AES.Encrypt(System.String,System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="toEncrypt">数据字符</param>
+            <param name="key">key</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.AES.Decrypt(System.String,System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="toDecrypt">密文</param>
+            <param name="key">key</param>
+            <returns>结果</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Encrypt.Des">
+            <summary>
+            Des加密解密类
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Encrypt.Des.KEY">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Encrypt.Des.IV">
+            <summary>
+            IV
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.Des.Encrypt(System.String,System.String)">
+            <summary>
+            DES加密方法
+            </summary>
+            <param name="source">原文</param>
+            <param name="key">key</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.Des.Decrypt(System.String,System.String)">
+            <summary>
+            进行DES解密。
+            </summary>
+            <param name="key">key</param>
+            <param name="source">要解密的base64串</param>
+            <returns>已解密的字符串。</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Encrypt.GZipString">
+            <summary>
+            GZipString
+            </summary>	
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.GZipString.GZipCompressString(System.String)">
+            <summary>
+            将传入字符串以GZip算法压缩后，返回Base64编码字符
+            </summary>
+            <param name="rawString">需要压缩的字符串</param>
+            <returns>压缩后的Base64编码的字符串</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.GZipString.Compress(System.Byte[])">
+            <summary>
+            GZip压缩
+            </summary>
+            <param name="rawData">数据包</param>
+            <returns>压缩数据包</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.GZipString.GZipDecompressString(System.String)">
+            <summary>
+            将传入的二进制字符串资料以GZip算法解压缩
+            </summary>
+            <param name="gzipString">经GZip压缩后的二进制字符串</param>
+            <returns>原始未压缩字符串</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.GZipString.Decompress(System.Byte[])">
+            <summary>
+            GZIP解压
+            </summary>
+            <param name="gzipData">数据包</param>
+            <returns>解压数据包</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Encrypt.Md5">
+            <summary>
+            Md5
+            </summary>	
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.Md5.Encrypt32(System.String)">
+            <summary>
+            加密32
+            </summary>
+            <param name="source">数据</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.Md5.Encrypt16(System.String)">
+            <summary>
+            加密16
+            </summary>
+            <param name="source">数据</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.Md5.MD5Encoding(System.String)">
+            <summary>  
+            MD5 加密字符串  
+            </summary>  
+            <param name="rawPass">源字符串</param>  
+            <returns>加密后字符串</returns>  
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.Md5.MD5Encoding(System.String,System.Object)">
+            <summary>  
+            MD5盐值加密  
+            </summary>  
+            <param name="rawPass">源字符串</param>  
+            <param name="salt">盐值</param>  
+            <returns>加密后字符串</returns>  
+        </member>
+        <member name="T:Go.StandardUtility.Common.Encrypt.RSA">
+            <summary>
+            RSA
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.RSA.RSACheckContent(System.String,System.String,System.String)">
+            <summary>
+            检查RSA签名内容是否正确
+            </summary>
+            <param name="signContent">原始内容</param>
+            <param name="sign">签名后的字符串(base64转换后的值)</param>
+            <param name="publicKeyXml">签名私钥所对应的公钥</param>
+            <returns>验签结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.RSA.RSACheckContent(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String)">
+            <summary>
+            检查签名内容是否正确
+            </summary>
+            <param name="paramDic">参数信息</param>
+            <param name="sign">签名后的字符串(base64转换后的值)</param>
+            <param name="publicKeyXml">签名私钥所对应的公钥</param>
+            <returns>验签结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.RSA.RSACheckContent``1(``0,System.String,System.String)">
+            <summary>
+            检查签名内容是否正确
+            </summary>
+            <param name="paramModel">参数信息</param>
+            <param name="sign">签名后的字符串(base64转换后的值)</param>
+            <param name="publicKeyXml">签名私钥所对应的公钥</param>
+            <returns>验签结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.RSA.GetSignContent(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            GetSignContent
+            </summary>
+            <param name="parameters">parameters</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.RSA.RSASign(System.String,System.String)">
+            <summary>
+            RSA签名
+            </summary>
+            <param name="content">参数</param>
+            <param name="privateKeyXml">私钥</param>
+            <returns>签名内容(base64转换后的值)</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.RSA.RSASign(System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+            RSA签名
+            </summary>
+            <param name="paramDic">参数</param>
+            <param name="privateKeyXml">私钥</param>
+            <returns>签名内容(base64转换后的值)</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.RSA.RSASign``1(``0,System.String)">
+            <summary>
+            RSA签名
+            </summary>
+            <param name="paramModel">参数</param>
+            <param name="privateKeyXml">私钥</param>
+            <returns>签名内容(base64转换后的值)</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.RSA.CreateRSAKey">
+            <summary>
+            生成RSA公钥、私钥
+            </summary>
+            <returns>参数1=公钥，参数2=私钥</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.RSA.Encrypt(System.String,System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="content">加密内容</param>
+            <param name="publicKeyXml">key</param>
+            <returns>加密结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.RSA.Decrypt(System.String,System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="privatekey">key</param>
+            <param name="content">解密内容</param>
+            <returns>解密结果</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Encrypt.SHA1">
+            <summary>
+            SHA1
+            </summary>	
+        </member>
+        <member name="M:Go.StandardUtility.Common.Encrypt.SHA1.Encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="source">数据</param>
+            <returns>密文</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Extension.ExceptionExtension">
+            <summary>
+            异常扩展类
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ExceptionExtension.TryExecute``1(System.Func{``0},System.Func{System.Exception,``0})">
+            <summary>
+            尝试执行函数，并捕获异常，发生异常后返回默认值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="func"></param>
+            <param name="errorCallback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ExceptionExtension.TryExecute(System.Action,System.Action{System.Exception})">
+            <summary>
+            尝试执行函数，并捕获异常，发生异常后返回默认值
+            </summary>
+            <param name="func"></param>
+            <param name="errorCallback"></param>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ExceptionExtension.TryExecuteAsync``1(System.Func{System.Threading.Tasks.Task{``0}},System.Func{System.Exception,``0})">
+            <summary>
+            尝试异步执行函数，并捕获异常，发生异常后返回默认值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="func"></param>
+            <param name="errorCallback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ExceptionExtension.TryExecute``1(System.Func{Go.StandardUtility.Common.Code.Result{``0}},System.Func{System.Exception,Go.StandardUtility.Common.Code.Result{``0}})">
+            <summary>
+            尝试执行函数，并捕获异常，发生异常后返回默认值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="func"></param>
+            <param name="errorCallback"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Extension.ExpressionExtension">
+            <summary>
+            表达式扩展类
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ExpressionExtension.Compose``1(System.Linq.Expressions.Expression{``0},System.Linq.Expressions.Expression{``0},System.Func{System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Linq.Expressions.Expression})">
+            <summary>
+            Lambda表达式拼接
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="first"></param>
+            <param name="second"></param>
+            <param name="merge"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ExpressionExtension.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            and扩展
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ExpressionExtension.And``3(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,``1,``2,System.Boolean}})">
+            <summary>
+            
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <typeparam name="T3"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ExpressionExtension.And``2(System.Linq.Expressions.Expression{System.Func{``0,``1,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,``1,System.Boolean}})">
+            <summary>
+            
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ExpressionExtension.Or``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            or扩展
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ExpressionExtension.Or``2(System.Linq.Expressions.Expression{System.Func{``0,``1,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,``1,System.Boolean}})">
+            <summary>
+            or扩展
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ExpressionExtension.Or``3(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,``1,``2,System.Boolean}})">
+            <summary>
+            or扩展
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <typeparam name="T3"></typeparam>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Extension.ParameterRebinder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ParameterRebinder.#ctor(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression})">
+            <summary>
+            
+            </summary>
+            <param name="map"></param>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ParameterRebinder.ReplaceParameters(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression},System.Linq.Expressions.Expression)">
+            <summary>
+            
+            </summary>
+            <param name="map"></param>
+            <param name="exp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.ParameterRebinder.VisitParameter(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Extension.IEnumerableExtension">
+            <summary>
+            Linq扩展
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Join(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            根据字符串拆分数组
+            </summary>
+            <param name="source">
+            要拆分的数组
+            </param>
+            <param name="separator">
+            拆分符
+            </param>
+            <returns>
+            字符串
+            </returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Join``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Func{``0,System.String})">
+            <summary>
+            根据字符串拆分数组
+            </summary>
+            <typeparam name="TSource">类型</typeparam>
+            <param name="soucre"> 要拆分的数组</param>
+            <param name="separator">拆分符</param>
+            <param name="map">拆分条件</param>
+            <returns>字符串 <see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Sort``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.KeyValuePair{System.Boolean,System.Func{``0,System.Object}}[])">
+            <summary>
+            多条件排序扩展方法
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="sources">sources</param>
+            <param name="keySelector">keySelector</param>
+            <returns>排序结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.OrderBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,``1})">
+            <summary>
+            升序
+            </summary>
+            <typeparam name="TSource">数据源类型</typeparam>
+            <typeparam name="TKey">排序字段类型</typeparam>
+            <param name="sources">数据</param>
+            <param name="predicate">条件</param>
+            <param name="keySelector">排序条件</param>
+            <returns>最终数据</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.OrderByDescending``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,``1})">
+            <summary>
+            降序
+            </summary>
+            <typeparam name="TSource">数据源类型</typeparam>
+            <typeparam name="TKey">排序字段类型</typeparam>
+            <param name="sources">数据</param>
+            <param name="predicate">条件</param>
+            <param name="keySelector">排序条件</param>
+            <returns>最终数据</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.OrderBy``1(System.Linq.IQueryable{``0},System.String,System.Boolean)">
+            <summary>
+            扩展Linq的OrderBy方法，实现根据属性和顺序(倒序)进行排序，调用和linq的方法一致
+            </summary>
+            <typeparam name="TEntity">需要排序的实体对象</typeparam>
+            <param name="source">结果集信息</param>
+            <param name="propertyStr">动态排序的属性名(从前台获取)</param>
+            <param name="isDesc">排序方式，不传递表示顺序，默认true，false表示倒序</param>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.MaxElement``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+             获取最大值的当前对象
+            </summary>
+            <typeparam name="TElement">TElement</typeparam>
+            <typeparam name="TData">TData</typeparam>
+            <param name="source">source</param>
+            <param name="selector">selector</param>
+            <returns>MaxValue</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.MinElement``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+             获取最小值的当前对象
+            </summary>
+            <typeparam name="TElement">TElement</typeparam>
+            <typeparam name="TData">TData</typeparam>
+            <param name="source">source</param>
+            <param name="selector">selector</param>
+            <returns>MaxValue</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Max``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Decimal})">
+            <summary>
+            求最大值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最大值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Max``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Double})">
+            <summary>
+            求最大值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最大值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Max``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Int32})">
+            <summary>
+            求最大值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最大值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Max``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Int64})">
+            <summary>
+            求最大值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最大值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Max``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Single})">
+            <summary>
+            求最大值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最大值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Max``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Decimal}})">
+            <summary>
+            求最大值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最大值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Max``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Double}})">
+            <summary>
+            求最大值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最大值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Max``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Int32}})">
+            <summary>
+            求最大值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最大值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Max``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Int64}})">
+            <summary>
+            求最大值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最大值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Max``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Single}})">
+            <summary>
+            求最大值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最大值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Min``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Decimal})">
+            <summary>
+            求最小值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最小值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Min``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Double})">
+            <summary>
+            求最小值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最小值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Min``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Int32})">
+            <summary>
+            求最小值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最小值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Min``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Int64})">
+            <summary>
+            求最小值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最小值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Min``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Single})">
+            <summary>
+            求最小值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最小值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Min``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Decimal}})">
+            <summary>
+            求最小值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最小值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Min``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Double}})">
+            <summary>
+            求最小值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最小值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Min``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Int32}})">
+            <summary>
+            求最小值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最小值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Min``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Int64}})">
+            <summary>
+            求最小值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最小值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Min``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Single}})">
+            <summary>
+            求最小值
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>最小值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Sum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Decimal})">
+            <summary>
+            求和
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>和</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Sum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Double})">
+            <summary>
+            求和
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>和</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Sum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Int32})">
+            <summary>
+            求和
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>和</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Sum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Int64})">
+            <summary>
+            求和
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>和</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Sum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Single})">
+            <summary>
+            求和
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>和</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Sum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Decimal}})">
+            <summary>
+            求和
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>和</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Sum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Double}})">
+            <summary>
+            求和
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>和</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Sum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Int32}})">
+            <summary>
+            求和
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>和</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Sum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Int64}})">
+            <summary>
+            求和
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>和</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Sum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Func{``0,System.Nullable{System.Single}})">
+            <summary>
+            求和
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <param name="selector">selector</param>
+            <returns>和</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Repeat``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            是否存在重复
+            </summary>
+            <typeparam name="TSource">TSource</typeparam>
+            <param name="source">source</param>
+            <param name="predicate">predicate</param>
+            <returns>结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Repeat``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            根据某个字段获取重复数据
+            </summary>
+            <typeparam name="TSource">数据类型</typeparam>
+            <typeparam name="Tkey">字段类型</typeparam>
+            <param name="source">数据源</param>
+            <param name="predicate">表达式</param>
+            <returns>结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.AllRepeat``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            所有的数据是否都是重复的
+            </summary>
+            <typeparam name="TSource">数据类型</typeparam>
+            <typeparam name="Tkey">字段类型</typeparam>
+            <param name="source">数据源</param>
+            <param name="predicate">表达式</param>
+            <returns>结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.Comparer``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})">
+            <summary>
+            比较
+            </summary>
+            <typeparam name="TSource">数据源</typeparam>
+            <param name="first">第一个</param>
+            <param name="second">第二个</param>
+            <param name="comparer">比较器</param>
+            <returns>结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.ComparableElement``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Boolean)">
+            <summary>
+             获取最大or最小值的当前对象
+            </summary>
+            <typeparam name="TElement">TElement</typeparam>
+            <typeparam name="TData">TData</typeparam>
+            <param name="source">source</param>
+            <param name="selector">selector</param>
+            <param name="isMax">最大还是最小</param>
+            <returns>MaxValue</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.IEnumerableExtension.AnyNull(System.Linq.IQueryable)">
+            <summary>
+            Any
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Extension.NumberConverter">
+            <inheritdoc />
+            <summary>
+            大数字json序列化重写
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Extension.NumberConverter._ship">
+            <summary>
+            转换成字符串的类型
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.NumberConverter.#ctor">
+            <summary>
+            大数字json序列化重写实例化
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.NumberConverter.#ctor(Go.StandardUtility.Common.Extension.NumberConverterShip)">
+            <summary>
+            大数字json序列化重写实例化
+            </summary>
+            <param name="ship">转换成字符串的类型</param>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.NumberConverter.CanConvert(System.Type)">
+            <inheritdoc />
+            <summary>
+            确定此实例是否可以转换指定的对象类型。
+            </summary>
+            <param name="objectType">对象的类型。</param>
+            <returns>如果此实例可以转换指定的对象类型，则为：<c>true</c>，否则为：<c>false</c></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.NumberConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+            <summary>
+            读取对象的JSON表示。
+            </summary>
+            <param name="reader">从 <see cref="T:Newtonsoft.Json.JsonReader" /> 中读取。</param>
+            <param name="objectType">对象的类型。</param>
+            <param name="existingValue">正在读取的对象的现有值。</param>
+            <param name="serializer">调用的序列化器实例。</param>
+            <returns>对象值。</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.NumberConverter.AsType(System.String,System.Type)">
+            <summary>
+            字符串格式数据转其他类型数据
+            </summary>
+            <param name="input">输入的字符串</param>
+            <param name="destinationType">目标格式</param>
+            <returns>转换结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.NumberConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+            <summary>
+            写入对象的JSON表示形式。
+            </summary>
+            <param name="writer">要写入的 <see cref="T:Newtonsoft.Json.JsonWriter" /> 。</param>
+            <param name="value">要写入对象值</param>
+            <param name="serializer">调用的序列化器实例。</param>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.NumberConverter.IsCollectionType(System.Type)">
+            <summary>
+            判断是否是集合类型
+            </summary>
+            <param name="type">类型</param>
+            <returns>判断结果，集合类型=true</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.NumberConverter.IsListType(System.Type)">
+            <summary>
+            判断是否是集合类型
+            </summary>
+            <param name="type">类型</param>
+            <returns>判断结果，集合类型=true</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.NumberConverter.HasImplementedRawGeneric(System.Type,System.Type)">
+            <summary>
+            判断指定的类型 <paramref name="type"/> 是否是指定泛型类型的子类型，或实现了指定泛型接口。
+            </summary>
+            <param name="type">需要测试的类型。</param>
+            <param name="generic">泛型接口类型，传入 typeof(IXxx&lt;&gt;)</param>
+            <returns>如果是泛型接口的子类型，则返回 true，否则返回 false。</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Extension.NumberConverterShip">
+            <summary>
+            转换成字符串的类型
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Extension.NumberConverterShip.Int64">
+            <summary>
+            长整数
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Extension.NumberConverterShip.UInt64">
+            <summary>
+            无符号长整数
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Extension.NumberConverterShip.Single">
+            <summary>
+            浮点数
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Extension.NumberConverterShip.Double">
+            <summary>
+            双精度浮点数
+            </summary>
+        </member>
+        <member name="F:Go.StandardUtility.Common.Extension.NumberConverterShip.Decimal">
+            <summary>
+            大数字
+            </summary>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Extension.SerializerExtension">
+            <summary>
+            序列化
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.SerializerExtension.SerializeObject(System.Object)">
+            <summary>
+            JSON序列化
+            </summary>
+            <param name="obj">对象</param>
+            <returns>JSON字符串</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.SerializerExtension.DeserializeObject``1(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <typeparam name="T">对象</typeparam>
+            <param name="json">JSON字符串</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.SerializerExtension.DeserializeObject(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="json">JSON字符串</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.SerializerExtension.DeepCopy``1(``0)">
+            <summary>
+            XML序列化方式深复制
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="obj">对象</param>
+            <returns>复制对象</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.SerializerExtension.CopyToModel``2(``0)">
+            <summary>
+            将一个实体对象转换为另一个实体对象
+            </summary>
+            <typeparam name="T1">第一个实体对象</typeparam>
+            <typeparam name="T2">第二个实体对象</typeparam>
+            <param name="source">转换的实体对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.SerializerExtension.CopyToModel``2(System.Collections.Generic.List{``0})">
+            <summary>
+            将一个实体对象转换为另一个实体对象
+            </summary>
+            <typeparam name="T1">第一个实体对象</typeparam>
+            <typeparam name="T2">第二个实体对象</typeparam>
+            <param name="source">转换的实体对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.SerializerExtension.ToSortedJson``1(``0,System.String[])">
+            <summary>
+            JSON序列化(按key排序)
+            </summary>
+            <param name="obj">要序列化的model</param>
+            <param name="keysFilter">需要过滤的keys（小写）</param>
+            <returns>JSON字符串</returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Extension.PropertySortResolver">
+            <summary>
+            输出到json字符串时，属性名称按照字典顺序排序输出
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.PropertySortResolver.CreateProperties(System.Type,Newtonsoft.Json.MemberSerialization)">
+            <summary>
+            属性名称按照字典顺序排序输出
+            </summary>
+            <param name="type"></param>
+            <param name="memberSerialization"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Extension.StringExtension">
+            <summary>
+            字符串扩展类
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.StringExtension.IsNullOrEmpty(System.String)">
+            <summary>
+            判断字符串是否为空
+            </summary>
+            <param name="val">要判断得字符串</param>
+            <returns></returns>
+        </member>
+        <member name="T:Go.StandardUtility.Common.Extension.XmlExtension">
+            <summary>
+            xml扩展类
+            </summary>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.XmlExtension.GetValue(System.String)">
+            <summary>
+            获取最终结果值
+            </summary>
+            <param name="value">值</param>
+            <returns>结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.XmlExtension.GetString(System.Xml.Linq.XElement)">
+            <summary>
+            获取xml节点值
+            </summary>
+            <param name="element">文档结构</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.XmlExtension.GetGuid(System.Xml.Linq.XElement)">
+            <summary>
+            获取xml节点值
+            </summary>
+            <param name="element">文档结构</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.XmlExtension.GetInt(System.Xml.Linq.XElement)">
+            <summary>
+            获取xml节点值
+            </summary>
+            <param name="element">文档结构</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.XmlExtension.GetLong(System.Xml.Linq.XElement)">
+            <summary>
+            获取xml节点值
+            </summary>
+            <param name="element">文档结构</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.XmlExtension.GetDateTime(System.Xml.Linq.XElement)">
+            <summary>
+            获取xml节点值
+            </summary>
+            <param name="element">文档结构</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.XmlExtension.GetDateTimes(System.Xml.Linq.XElement)">
+            <summary>
+            获取xml节点值转换为时间列表
+            </summary>
+            <param name="element">文档结构</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.XmlExtension.GetDecimal(System.Xml.Linq.XElement)">
+            <summary>
+            获取xml节点值
+            </summary>
+            <param name="element">文档结构</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Common.Extension.XmlExtension.GetBoolean(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            获取xml节点值
+            </summary>
+            <param name="element">文档结构</param>
+            <param name="symbol">标识符号</param>
+            <returns>值</returns>
+        </member>
+    </members>
+</doc>

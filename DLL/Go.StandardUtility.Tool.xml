@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Go.StandardUtility.Tool</name>
+    </assembly>
+    <members>
+        <member name="M:Go.StandardUtility.Tool.ConfigurationManager.GetSectionValue(System.String)">
+            <summary>
+            获取配置文件节点的值，支持嵌套对象，key的格式类似于 RedisConfig:RedisDb:Name
+            【注意】此方法仅适用于获取配置文件的最后一级，即配置节点的值只能是string、int等基础类型，不能是对象
+            </summary>
+            <param name="key">key</param>
+            <returns>配置文件节点的值</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Tool.WcfHelper.Invoke``2(System.String,System.String,System.Object[])">
+            <summary>
+            wcf调用方法
+            </summary>
+            <typeparam name="TContractName">契约名称</typeparam>
+            <typeparam name="TReturnType">返回值类型</typeparam>
+            <param name="url">请求地址</param>
+            <param name="methodName">方法名字</param>
+            <param name="param">参数</param>
+            <returns>结果</returns>
+        </member>
+        <member name="M:Go.StandardUtility.Tool.WcfHelper.Invoke``1(System.String,System.Action{``0})">
+            <summary>
+            wcf调用方法
+            </summary>
+            <typeparam name="TContractName">契约名称</typeparam>
+            <param name="url">请求地址</param>
+            <param name="action">处理方法</param>
+        </member>
+        <member name="M:Go.StandardUtility.Tool.WcfHelper.Invoke``2(System.String,System.Func{``0,``1})">
+            <summary>
+            wcf调用方法
+            </summary>
+            <typeparam name="TContractName">契约名称</typeparam>
+            <typeparam name="TReturnType">返回值类型</typeparam>
+            <param name="url">请求地址</param>
+            <param name="action">处理方法</param>
+            <returns>处理结果</returns>
+        </member>
+    </members>
+</doc>
