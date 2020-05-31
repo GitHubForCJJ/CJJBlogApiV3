@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CJJ_BlogApiV3New</name>
+    </assembly>
+    <members>
+        <member name="T:CJJ_BlogApiV3New.Controllers.BlogController">
+            <summary>
+            h5博客相关
+            </summary>
+        </member>
+        <member name="M:CJJ_BlogApiV3New.Controllers.BlogController.GetList(CJJ_BlogApiV3.Model.ReuqestModel.BaseViewModel)">
+            <summary>
+            查询list
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CJJ_BlogApiV3New.Filter.GlobalExceptionsFilter">
+            <summary>
+            全局异常过滤器
+            </summary>
+        </member>
+        <member name="M:CJJ_BlogApiV3New.Filter.GlobalExceptionsFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            Called after an action has thrown an <see cref="T:System.Exception" />.
+            </summary>
+            <param name="context">The <see cref="T:Microsoft.AspNetCore.Mvc.Filters.ExceptionContext" />.</param>
+        </member>
+        <member name="T:CJJ_BlogApiV3New.SetupExtensions.SqlSugarSetup">
+            <summary>
+            sqlsugar 拓展
+            </summary>
+        </member>
+        <member name="M:CJJ_BlogApiV3New.SetupExtensions.SqlSugarSetup.AddSqlSugarSetup(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CJJ_BloCJJ_BlogApiV3NewgApiV3.SetupExtensions.SwaggerSetup.AddSwaggerSetup(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+    </members>
+</doc>

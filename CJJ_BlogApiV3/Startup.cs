@@ -66,7 +66,6 @@ namespace CJJ_BlogApiV3
                 app.UseDeveloperExceptionPage();
             }
             app.UseStaticFiles();//启用默认文件夹wwwroot
-            app.UseMvc();
             #region Swagger
             app.UseSwagger();
             app.UseSwaggerUI(c =>

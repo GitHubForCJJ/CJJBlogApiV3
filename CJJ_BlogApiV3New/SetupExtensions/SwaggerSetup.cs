@@ -1,14 +1,14 @@
 ﻿using CJJ.log4netCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Filters;
+
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CJJ_BlogApiV3.SetupExtensions
+namespace CJJ_BloCJJ_BlogApiV3NewgApiV3.SetupExtensions
 {
     public static class SwaggerSetup
     {
@@ -24,13 +24,13 @@ namespace CJJ_BlogApiV3.SetupExtensions
                 c.SwaggerDoc("v1", new OpenApiInfo()
                 {
                     Version = "v1.0.0",
-                    Title = "CJJ_BlogApiV3",
+                    Title = "CJJ_BlogApiV3New",
                     Description = "用户Api说明文档",
                 });
                 var basePath = AppContext.BaseDirectory;
-                var xmlPath = Path.Combine(basePath, "CJJ_BlogApiV3.xml");
+                var xmlPath = Path.Combine(basePath, "CJJ_BlogApiV3New.xml");
                 c.IncludeXmlComments(xmlPath, true);
-                xmlPath = Path.Combine(basePath, "CJJ_BlogApiV3.xml");
+                xmlPath = Path.Combine(basePath, "CJJ_BlogApiV3New.xml");
                 c.IncludeXmlComments(xmlPath);
 
 
