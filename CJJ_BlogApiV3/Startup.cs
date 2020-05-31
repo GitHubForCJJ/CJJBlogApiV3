@@ -10,6 +10,9 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Mvc.Controllers;
+using Microsoft.OpenApi.Models;
+using System.IO;
+using Swashbuckle.Swagger;
 
 namespace CJJ_BlogApiV3
 {
@@ -27,8 +30,11 @@ namespace CJJ_BlogApiV3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSwaggerSetup();
+            //注册Swagger生成器，定义一个和多个Swagger 文档
+
+
+
             services.AddSqlSugarSetup();
-            services.Replace(ServiceDescriptor.Transient<IControllerActivator, ServiceBasedControllerActivator>());
             services.AddControllers(o =>
             {
                 //// 全局异常过滤
@@ -50,13 +56,6 @@ namespace CJJ_BlogApiV3
                     //options.SerializerSettings.Converters.
                 });
 
-            //var builder = new ContainerBuilder();
-            //builder.Populate(services);
-            ////builder.RegisterAssemblyTypes(typeof(BloginfoLogic).Assembly).AsImplementedInterfaces();
-            ////builder.RegisterAssemblyTypes(typeof(BloginfoRepository).Assembly).AsImplementedInterfaces();
-            //ConfigureContainer(builder);
-            //var Container = builder.Build();
-            //return new AutofacServiceProvider(Container);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,13 +65,13 @@ namespace CJJ_BlogApiV3
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseStaticFiles();//启用默认文件夹wwwroot
+            app.UseMvc();
             #region Swagger
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiHelp v1");
-                c.RoutePrefix = "";
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "CJJ_BlogApiV3)");
             });
 
             #endregion
@@ -87,8 +86,13 @@ namespace CJJ_BlogApiV3
             {
                 endpoints.MapControllers();
             });
+
         }
 
+        /// <summary>
+        /// .netcore3.0后使用autoface  可以使用这个方法注入
+        /// </summary>
+        /// <param name="builder"></param>
         public void ConfigureContainer(ContainerBuilder builder)
         {
             builder.RegisterAssemblyTypes(typeof(Logic.BloginfoLogic).Assembly).AsImplementedInterfaces().InstancePerLifetimeScope();

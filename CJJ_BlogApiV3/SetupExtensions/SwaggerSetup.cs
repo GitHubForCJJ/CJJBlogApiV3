@@ -24,16 +24,16 @@ namespace CJJ_BlogApiV3.SetupExtensions
                 c.SwaggerDoc("v1", new OpenApiInfo()
                 {
                     Version = "v1.0.0",
-                    Title = "Go.MicroShop.UserApi",
+                    Title = "CJJ_BlogApiV3",
                     Description = "用户Api说明文档",
                 });
 
                 try
                 {
                     var basePath = AppContext.BaseDirectory;
-                    var xmlPath = Path.Combine(basePath, "Go.MicroShop.UserApi.xml");
+                    var xmlPath = Path.Combine(basePath, "CJJ_BlogApiV3.xml");
                     c.IncludeXmlComments(xmlPath, true);
-                    xmlPath = Path.Combine(basePath, "Go.MicroShop.UserApi.Model.xml");
+                    xmlPath = Path.Combine(basePath, "CJJ_BlogApiV3.xml");
                     c.IncludeXmlComments(xmlPath);
                 }
                 catch (Exception e)
