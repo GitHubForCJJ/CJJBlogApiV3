@@ -43,5 +43,11 @@
             </summary>
             <param name="services"></param>
         </member>
+        <member name="M:CJJ_BlogApiV3.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            .netcore3.1 下autoface程序集注入
+            </summary>
+            <param name="builder"></param>
+        </member>
     </members>
 </doc>

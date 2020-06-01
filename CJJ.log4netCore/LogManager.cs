@@ -11,7 +11,7 @@ namespace CJJ.log4netCore
     {
         private static ILog logger;
         private static ILoggerRepository loggerRepository { get; set; }
-        public void LogHelper()
+        static LogManager()
         {
             loggerRepository = log4net.LogManager.CreateRepository("NETCoreLog4netRepository");
             var file = new FileInfo(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "XmlConfig\\log4net.config"));
@@ -22,13 +22,13 @@ namespace CJJ.log4netCore
         /// 
         /// </summary>
         /// <param name="configpath">配置地址 全路径</param>
-        public void LogHelper(string configpath)
-        {
-            loggerRepository = log4net.LogManager.CreateRepository("NETCoreLog4netRepository");
-            var file = new FileInfo(configpath);
-            log4net.Config.XmlConfigurator.Configure(loggerRepository, file);
-            logger = log4net.LogManager.GetLogger("NETCoreLog4netRepository", "loginfo");
-        }
+        // static LogManager(string configpath)
+        //{
+        //    loggerRepository = log4net.LogManager.CreateRepository("NETCoreLog4netRepository");
+        //    var file = new FileInfo(configpath);
+        //    log4net.Config.XmlConfigurator.Configure(loggerRepository, file);
+        //    logger = log4net.LogManager.GetLogger("NETCoreLog4netRepository", "loginfo");
+        //}
         /// <summary>
         /// 普通日志
         /// </summary>

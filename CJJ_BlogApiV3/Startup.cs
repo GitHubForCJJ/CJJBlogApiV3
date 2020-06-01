@@ -34,7 +34,7 @@ namespace CJJ_BlogApiV3
             services.AddControllers();
             services.AddSwaggerSetup();
             services.AddSqlSugarSetup();
-
+            //services.AddSingleton(typeof(LogManager));
             services.AddControllers(o =>
             {
                 //// 全局异常过滤
@@ -79,7 +79,7 @@ namespace CJJ_BlogApiV3
                 //加上后，访问地址：https://localhost:44388
                 //c.RoutePrefix = "https://localhost:44388/swagger";//访问地址：https://localhost:49382/swagger      
             });
-
+            //app.UseLog4net();
 
             app.UseEndpoints(endpoints =>
             {
@@ -87,10 +87,15 @@ namespace CJJ_BlogApiV3
             });
         }
 
+        /// <summary>
+        /// .netcore3.1 下autoface程序集注入
+        /// </summary>
+        /// <param name="builder"></param>
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            builder.RegisterAssemblyTypes(typeof(Logic.BloginfoLogic).Assembly, typeof(ILogic.IBloginfoLogic).Assembly).AsImplementedInterfaces().InstancePerLifetimeScope();
-            builder.RegisterAssemblyTypes(typeof(Repository.BloginfoRepository).Assembly, typeof(IRepository.IBloginfoRepository).Assembly).AsImplementedInterfaces().InstancePerLifetimeScope();
+            builder.RegisterAssemblyTypes(typeof(Logic.BloginfoLogic).Assembly).AsImplementedInterfaces().InstancePerLifetimeScope();
+            builder.RegisterAssemblyTypes(typeof(Repository.BloginfoRepository).Assembly).AsImplementedInterfaces().InstancePerLifetimeScope();
+            //builder.RegisterType(typeof(LogManager));
         }
     }
 }

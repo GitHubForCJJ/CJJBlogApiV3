@@ -20,7 +20,7 @@ namespace CJJ_BlogApiV3.Filter
         /// <param name="context">The <see cref="T:Microsoft.AspNetCore.Mvc.Filters.ExceptionContext" />.</param>
         public void OnException(ExceptionContext context)
         {
-            //LogManager.Error( "全局异常",context.Exception);
+            LogManager.Error( "全局异常",context.Exception);
             context.Result = new ContentResult()
             {
                 StatusCode = 200,

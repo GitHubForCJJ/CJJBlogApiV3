@@ -22,6 +22,6 @@ namespace CJJ_BlogApiV3
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                }).UseServiceProviderFactory(new AutofacServiceProviderFactory());
+                }).UseServiceProviderFactory(new AutofacServiceProviderFactory());//Ìæ»»Ô­ÓÐµÄIOCÈÝÆ÷
     }
 }

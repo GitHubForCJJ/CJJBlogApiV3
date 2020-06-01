@@ -18,8 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CJJ.log4netCore\CJJ.log4netCore.csproj" />
-    <ProjectReference Include="..\CJJ_BlogApiV3.ILogic\CJJ_BlogApiV3.ILogic.csproj" />
-    <ProjectReference Include="..\CJJ_BlogApiV3.IRepository\CJJ_BlogApiV3.IRepository.csproj" />
     <ProjectReference Include="..\CJJ_BlogApiV3.Logic\CJJ_BlogApiV3.Logic.csproj" />
     <ProjectReference Include="..\CJJ_BlogApiV3.Model\CJJ_BlogApiV3.Model.csproj" />
     <ProjectReference Include="..\CJJ_BlogApiV3.Repository\CJJ_BlogApiV3.Repository.csproj" />
@@ -35,6 +33,12 @@
     <Reference Include="Go.StandardUtility.Tool">
       <HintPath>..\DLL\Go.StandardUtility.Tool.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="XmlConfig\log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 

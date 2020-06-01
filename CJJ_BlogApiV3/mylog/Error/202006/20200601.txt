@@ -1,0 +1,26 @@
+
+ 
+记录时间：2020-06-01 14:18:23,979 
+线程ID:[4] 
+日志级别：  ERROR 
+出错类：loginfo property: [(null)] - 
+错误描述：GetList进入  errorinfo
+ 
+
+ 
+记录时间：2020-06-01 14:21:15,637 
+线程ID:[4] 
+日志级别：  ERROR 
+出错类：loginfo property: [(null)] - 
+错误描述：GetList进入  errorinfo
+ 
+
+ 
+记录时间：2020-06-01 14:21:20,789 
+线程ID:[4] 
+日志级别：  ERROR 
+出错类：loginfo property: [(null)] - 
+错误描述：BlogController/GetListAttempted to divide by zero.
+ 
+System.DivideByZeroException: Attempted to divide by zero.
+   at CJJ_BlogApiV3New.Controllers.BlogController.GetList(BaseViewModel model) in E:\allblog\CJJ_BlogApiV3New\CJJ_BlogApiV3\CJJ_BlogApiV3\Controllers\BlogController.cs:line 40

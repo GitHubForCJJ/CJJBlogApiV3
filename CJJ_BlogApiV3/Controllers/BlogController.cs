@@ -34,6 +34,10 @@ namespace CJJ_BlogApiV3New.Controllers
         {
             try
             {
+                LogManager.Info("GetList进入22  info");
+                LogManager.Error("GetList进入  errorinfo");
+                int a = 1, b = 0;
+                var c = a / b;
                 var list = await bloginfoLogic.GetListBloginfo(model);
                 return new JsonResponse { Code = 0, Data = list };
             }

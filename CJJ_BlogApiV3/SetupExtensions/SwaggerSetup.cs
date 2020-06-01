@@ -38,7 +38,7 @@ namespace CJJ_BlogApiV3.SetupExtensions
                 }
                 catch (Exception e)
                 {
-                   // LogManager.Error("读取模型xml文件失败，swagger可能不会展示部分注释", e);
+                    LogManager.Error("读取模型xml文件失败，swagger可能不会展示部分注释", e);
                 }
 
                 c.OperationFilter<AddResponseHeadersFilter>();
