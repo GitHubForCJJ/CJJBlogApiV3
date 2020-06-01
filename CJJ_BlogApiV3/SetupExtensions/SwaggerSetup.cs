@@ -1,7 +1,7 @@
 ﻿using CJJ.log4netCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-
+using Swashbuckle.AspNetCore.Filters;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -38,23 +38,21 @@ namespace CJJ_BlogApiV3.SetupExtensions
                 }
                 catch (Exception e)
                 {
-                    LogManager.Error("读取模型xml文件失败，swagger可能不会展示部分注释", e);
+                   // LogManager.Error("读取模型xml文件失败，swagger可能不会展示部分注释", e);
                 }
 
+                c.OperationFilter<AddResponseHeadersFilter>();
+                c.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
+                c.OperationFilter<SecurityRequirementsOperationFilter>();
 
-
-                //c.OperationFilter<AddResponseHeadersFilter>();
-                //c.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
-                //c.OperationFilter<SecurityRequirementsOperationFilter>();
-
-                //// Token绑定到ConfigureServices
-                //c.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
-                //{
-                //    Description = "授权(数据将在请求头中进行传输) 直接在下框中输入Bearer {token}",
-                //    Name = "Authorization",//jwt默认的参数名称
-                //    In = ParameterLocation.Header,//jwt默认存放Authorization信息的位置(请求头中)
-                //    Type = SecuritySchemeType.ApiKey
-                //});
+                // Token绑定到ConfigureServices
+                c.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+                {
+                    Description = "授权(数据将在请求头中进行传输) 直接在下框中输入Bearer {token}",
+                    Name = "Authorization",//jwt默认的参数名称
+                    In = ParameterLocation.Header,//jwt默认存放Authorization信息的位置(请求头中)
+                    Type = SecuritySchemeType.ApiKey
+                });
             });
         }
     }

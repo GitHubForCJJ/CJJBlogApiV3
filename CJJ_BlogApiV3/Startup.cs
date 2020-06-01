@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Autofac;
 using CJJ.log4netCore;
+using CJJ_BlogApiV3.Filter;
 using CJJ_BlogApiV3.SetupExtensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,6 +33,29 @@ namespace CJJ_BlogApiV3
         {
             services.AddControllers();
             services.AddSwaggerSetup();
+            services.AddSqlSugarSetup();
+
+            services.AddControllers(o =>
+            {
+                //// 全局异常过滤
+                o.Filters.Add(typeof(GlobalExceptionsFilter));
+                //// 全局路由权限公约
+                ////o.Conventions.Insert(0, new GlobalRouteAuthorizeConvention());
+                //// 全局路由前缀，统一修改路由
+                //o.Conventions.Insert(0, new GlobalRoutePrefixFilter(new RouteAttribute(RoutePrefix.Name)));
+            })
+            //全局配置Json序列化处理
+             .AddNewtonsoftJson(options =>
+            {
+                ////忽略循环引用
+                //options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                ////不使用驼峰样式的key
+                //options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                //设置时间格式
+                options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+                //options.SerializerSettings.Converters.
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +85,12 @@ namespace CJJ_BlogApiV3
             {
                 endpoints.MapControllers();
             });
+        }
+
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterAssemblyTypes(typeof(Logic.BloginfoLogic).Assembly, typeof(ILogic.IBloginfoLogic).Assembly).AsImplementedInterfaces().InstancePerLifetimeScope();
+            builder.RegisterAssemblyTypes(typeof(Repository.BloginfoRepository).Assembly, typeof(IRepository.IBloginfoRepository).Assembly).AsImplementedInterfaces().InstancePerLifetimeScope();
         }
     }
 }
