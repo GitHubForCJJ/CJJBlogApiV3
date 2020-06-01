@@ -1,7 +1,7 @@
 ﻿using CJJ.log4netCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Filters;
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,13 +25,21 @@ namespace CJJ_BlogApiV3.SetupExtensions
                 {
                     Version = "v1.0.0",
                     Title = "CJJ_BlogApiV3",
-                    Description = "用户Api说明文档",
+                    Description = "CJJ_BlogApiV3说明文档",
                 });
-                var basePath = AppContext.BaseDirectory;
-                var xmlPath = Path.Combine(basePath, "CJJ_BlogApiV3.xml");
-                c.IncludeXmlComments(xmlPath, true);
-                xmlPath = Path.Combine(basePath, "CJJ_BlogApiV3.xml");
-                c.IncludeXmlComments(xmlPath);
+
+                try
+                {
+                    var basePath = AppContext.BaseDirectory;
+                    var xmlPath = Path.Combine(basePath, "CJJ_BlogApiV3.xml");
+                    c.IncludeXmlComments(xmlPath, true);
+                    xmlPath = Path.Combine(basePath, "CJJ_BlogApiV3.xml");
+                    c.IncludeXmlComments(xmlPath);
+                }
+                catch (Exception e)
+                {
+                    LogManager.Error("读取模型xml文件失败，swagger可能不会展示部分注释", e);
+                }
 
 
 

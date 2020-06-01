@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -14,9 +13,7 @@ namespace CJJ_BlogApiV3
     {
         public static void Main(string[] args)
         {
-            var a = CreateHostBuilder(args);
-            var b = a.Build();
-            b.Run();
+            CreateHostBuilder(args).Build().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -24,7 +21,6 @@ namespace CJJ_BlogApiV3
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                }).UseServiceProviderFactory(new AutofacServiceProviderFactory());
-
+                });
     }
 }

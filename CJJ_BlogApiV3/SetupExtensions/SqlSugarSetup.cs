@@ -39,7 +39,7 @@ namespace CJJ_BlogApiV3.SetupExtensions
                     },
                     ConfigureExternalServices = new ConfigureExternalServices()
                     {
-                        SqlFuncServices = Model.GoSqlFunc.GetFlagsEnumExtension()//set ext method
+                        SqlFuncServices = CJJ_BlogApiV3.Model.GoSqlFunc.GetFlagsEnumExtension()//set ext method
                     }
                 });
             });

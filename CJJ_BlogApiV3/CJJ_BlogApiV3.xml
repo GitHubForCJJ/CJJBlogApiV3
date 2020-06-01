@@ -4,12 +4,12 @@
         <name>CJJ_BlogApiV3</name>
     </assembly>
     <members>
-        <member name="T:CJJ_BlogApiV3.Controllers.BlogController">
+        <member name="T:CJJ_BlogApiV3New.Controllers.BlogController">
             <summary>
             h5博客相关
             </summary>
         </member>
-        <member name="M:CJJ_BlogApiV3.Controllers.BlogController.GetList(CJJ_BlogApiV3.Model.ReuqestModel.BaseViewModel)">
+        <member name="M:CJJ_BlogApiV3New.Controllers.BlogController.GetList(CJJ_BlogApiV3.Model.ReuqestModel.BaseViewModel)">
             <summary>
             查询list
             </summary>
@@ -42,12 +42,6 @@
             
             </summary>
             <param name="services"></param>
-        </member>
-        <member name="M:CJJ_BlogApiV3.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
-            <summary>
-            .netcore3.0后使用autoface  可以使用这个方法注入
-            </summary>
-            <param name="builder"></param>
         </member>
     </members>
 </doc>

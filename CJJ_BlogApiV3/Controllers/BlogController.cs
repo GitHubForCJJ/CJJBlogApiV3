@@ -10,7 +10,7 @@ using CJJ_BlogApiV3.Model.ReuqestModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CJJ_BlogApiV3.Controllers
+namespace CJJ_BlogApiV3New.Controllers
 {
     /// <summary>
     /// h5博客相关
@@ -29,11 +29,12 @@ namespace CJJ_BlogApiV3.Controllers
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
+        [HttpPost]
         public async Task<JsonResponse> GetList([FromBody] BaseViewModel model)
         {
             try
             {
-                var list= await bloginfoLogic.GetListBloginfo(model);
+                var list = await bloginfoLogic.GetListBloginfo(model);
                 return new JsonResponse { Code = 0, Data = list };
             }
             catch (Exception e)

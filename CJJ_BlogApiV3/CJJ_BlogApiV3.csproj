@@ -1,28 +1,22 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\MyProject\CJJBlogApiV3\CJJ_BlogApiV3\CJJ_BlogApiV3.xml</DocumentationFile>
-    <OutputPath></OutputPath>
+    <DocumentationFile>E:\allblog\CJJ_BlogApiV3New\CJJ_BlogApiV3\CJJ_BlogApiV3\CJJ_BlogApiV3.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="5.1.2" />
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="sqlSugarCore" Version="5.0.0.15" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.1.1" />
-    <PackageReference Include="Swashbuckle.Core" Version="5.6.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CJJ.log4netCore\CJJ.log4netCore.csproj" />
     <ProjectReference Include="..\CJJ_BlogApiV3.ILogic\CJJ_BlogApiV3.ILogic.csproj" />
-    <ProjectReference Include="..\CJJ_BlogApiV3.Logic\CJJ_BlogApiV3.Logic.csproj" />
     <ProjectReference Include="..\CJJ_BlogApiV3.Model\CJJ_BlogApiV3.Model.csproj" />
-    <ProjectReference Include="..\CJJ_BlogApiV3.Repository\CJJ_BlogApiV3.Repository.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,12 +29,6 @@
     <Reference Include="Go.StandardUtility.Tool">
       <HintPath>..\DLL\Go.StandardUtility.Tool.dll</HintPath>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="CJJ_BlogApiV3.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 
