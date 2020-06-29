@@ -51,8 +51,8 @@ namespace CJJ_BlogApiV3
                 //})
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
-                    webBuilder.UseSerilog((hostingContext, loggerConfiguration) =>
+                    webBuilder.UseStartup<Startup>()
+                    .UseSerilog((hostingContext, loggerConfiguration) =>
                     {
 
                         string LogFilePath(string LogEvent) => $@"{AppDomain.CurrentDomain.BaseDirectory}LogFiles\{LogEvent}\log.log";

@@ -42,8 +42,6 @@ namespace CJJ_BlogApiV3New.Controllers
                 //LogManager.Error("GetList进入  errorinfo");
                 logger.LogDebug("debug message");
                 logger.LogInformation("Seeding database...");
-                int a = 1, b = 0;
-                int c=a / b;
                 var list = await bloginfoLogic.GetListBloginfo(model);
                 return new JsonResponse { Code = 0, Data = list };
             }

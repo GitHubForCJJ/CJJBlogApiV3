@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json.Serialization;
 
 namespace CJJ_BlogApiV3
 {
@@ -31,7 +32,6 @@ namespace CJJ_BlogApiV3
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
             services.AddSwaggerSetup();
             services.AddSqlSugarSetup();
             //services.AddSingleton(typeof(LogManager));
@@ -50,7 +50,7 @@ namespace CJJ_BlogApiV3
                 ////忽略循环引用
                 //options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 ////不使用驼峰样式的key
-                //options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
                 //设置时间格式
                 options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
                 //options.SerializerSettings.Converters.
