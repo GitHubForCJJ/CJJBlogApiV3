@@ -22,33 +22,33 @@ namespace CJJ_BlogApiV3
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .UseSerilog((ctx, config) =>
-                {
-                    config.MinimumLevel.Debug()
-                        .MinimumLevel.Debug()
-                        .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-                        .MinimumLevel.Override("System", LogEventLevel.Warning)
-                        .MinimumLevel.Override("Microsoft.AspNetCore.Authentication", LogEventLevel.Information)
-                        .Enrich.FromLogContext();
+                //.UseSerilog((ctx, config) =>
+                //{
+                //    config.MinimumLevel.Debug()
+                //        .MinimumLevel.Debug()
+                //        .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+                //        .MinimumLevel.Override("System", LogEventLevel.Warning)
+                //        .MinimumLevel.Override("Microsoft.AspNetCore.Authentication", LogEventLevel.Information)
+                //        .Enrich.FromLogContext();
 
-                    if (ctx.HostingEnvironment.IsDevelopment())
-                    {
-                        //config.WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}");
-                        config.WriteTo.File($"{AppDomain.CurrentDomain.BaseDirectory}LogFiles{Path.DirectorySeparatorChar}cjjwebapiv3console.txt",
-                        fileSizeLimitBytes: 1_000_000,
-                        rollOnFileSizeLimit: true,
-                        shared: true,
-                        flushToDiskInterval: TimeSpan.FromSeconds(1));
-                    }
-                    else if (ctx.HostingEnvironment.IsProduction())
-                    {
-                        config.WriteTo.File($"{AppDomain.CurrentDomain.BaseDirectory}{Path.DirectorySeparatorChar}LogFiles{{Path.DirectorySeparatorChar}}cjjwebapiv3.txt",
-                            fileSizeLimitBytes: 1_000_000,
-                            rollOnFileSizeLimit: true,
-                            shared: true,
-                            flushToDiskInterval: TimeSpan.FromSeconds(1));
-                    }
-                })
+                //    if (ctx.HostingEnvironment.IsDevelopment())
+                //    {
+                //        //config.WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}");
+                //        config.WriteTo.File($"{AppDomain.CurrentDomain.BaseDirectory}LogFiles{Path.DirectorySeparatorChar}cjjwebapiv3console.txt",
+                //        fileSizeLimitBytes: 1_000_000,
+                //        rollOnFileSizeLimit: true,
+                //        shared: true,
+                //        flushToDiskInterval: TimeSpan.FromSeconds(1));
+                //    }
+                //    else if (ctx.HostingEnvironment.IsProduction())
+                //    {
+                //        config.WriteTo.File($"{AppDomain.CurrentDomain.BaseDirectory}{Path.DirectorySeparatorChar}LogFiles{{Path.DirectorySeparatorChar}}cjjwebapiv3.txt",
+                //            fileSizeLimitBytes: 1_000_000,
+                //            rollOnFileSizeLimit: true,
+                //            shared: true,
+                //            flushToDiskInterval: TimeSpan.FromSeconds(1));
+                //    }
+                //})
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
