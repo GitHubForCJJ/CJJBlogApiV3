@@ -4,8 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
+using Autofac.Core;
 using CJJ.log4netCore;
 using CJJ_BlogApiV3.Filter;
+using CJJ_BlogApiV3.Quartz;
 using CJJ_BlogApiV3.SetupExtensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +34,7 @@ namespace CJJ_BlogApiV3
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddQuartz(typeof(QuartzJob));
             services.AddSwaggerSetup();
             services.AddSqlSugarSetup();
             //services.AddSingleton(typeof(LogManager));
@@ -72,6 +75,9 @@ namespace CJJ_BlogApiV3
 
             app.UseAuthorization();
             app.UseSwagger();
+
+            QuartzService.StartJob<QuartzJob>();
+
             //启用中间件服务对swagger-ui，指定Swagger JSON终结点
             app.UseSwaggerUI(c =>
             {
