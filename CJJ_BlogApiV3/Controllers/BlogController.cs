@@ -7,6 +7,7 @@ using CJJ_BlogApiV3.ILogic;
 using CJJ_BlogApiV3.Model;
 using CJJ_BlogApiV3.Model.DbBaseModel;
 using CJJ_BlogApiV3.Model.ReuqestModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
