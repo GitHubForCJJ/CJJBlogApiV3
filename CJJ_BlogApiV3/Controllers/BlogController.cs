@@ -7,7 +7,9 @@ using CJJ.log4netCore;
 using CJJ_BlogApiV3.ILogic;
 using CJJ_BlogApiV3.Model;
 using CJJ_BlogApiV3.Model.DbBaseModel;
+using CJJ_BlogApiV3.Model.Mapper;
 using CJJ_BlogApiV3.Model.ReuqestModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -44,6 +46,8 @@ namespace CJJ_BlogApiV3New.Controllers
                 logger.LogDebug("debug message");
                 logger.LogInformation("Seeding database...");
                 var list = await bloginfoLogic.GetListBloginfo(model);
+                var dlist = list?.Data.MapToList<BloginfoView>();
+                //test aotumapper
                 return new JsonResponse { Code = 0, Data = list };
             }
             catch (Exception e)

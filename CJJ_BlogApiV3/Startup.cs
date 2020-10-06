@@ -10,6 +10,7 @@ using CJJ.log4netCore;
 using CJJ_BlogApiV3.Filter;
 using CJJ_BlogApiV3.Quartz;
 using CJJ_BlogApiV3.SetupExtensions;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -65,6 +66,15 @@ namespace CJJ_BlogApiV3
 
             services.AddSqlSugarSetup();
             //services.AddSingleton(typeof(LogManager));
+
+            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+            .AddIdentityServerAuthentication(options =>
+            {
+                options.Authority = Configuration.GetSection("IdentityServerUrl").Value;
+                options.ApiName = "openauthapi";
+                options.RequireHttpsMetadata = false;
+            });
+
             services.AddControllers(o =>
             {
                     //// 全局异常过滤
@@ -100,6 +110,7 @@ namespace CJJ_BlogApiV3
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseSwagger();
 
