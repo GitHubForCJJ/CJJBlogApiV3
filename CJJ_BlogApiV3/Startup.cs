@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -35,29 +36,55 @@ namespace CJJ_BlogApiV3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddQuartz(typeof(QuartzJob));
-            services.AddSwaggerSetup();
+            //services.AddSwaggerSetup();
+
+            services.AddSwaggerGen(operation =>
+            {
+                operation.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "CJJ_BlogApiV3WebApi",   //标题
+                    Description = "这是测试Core引入Swagger",
+                    Version = "1.0.1", //版本
+                    TermsOfService = new Uri("https://www.baidu.com/"), //"服务条款"
+                    Contact = new OpenApiContact //Api的联系人
+                    {
+                        Name = "WuJinHua",
+                        Url = new Uri("https://www.wujinhua.com"),
+                        Email = "403062268@qq.com"
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "YaYa",
+                        //许可证签名
+                        Url = new Uri("https://www.YaYa.com/")
+                    }
+                });
+            });
+
+
+
             services.AddSqlSugarSetup();
             //services.AddSingleton(typeof(LogManager));
             services.AddControllers(o =>
             {
-                //// 全局异常过滤
-                o.Filters.Add(typeof(GlobalExceptionsFilter));
-                //// 全局路由权限公约
-                ////o.Conventions.Insert(0, new GlobalRouteAuthorizeConvention());
-                //// 全局路由前缀，统一修改路由
-                //o.Conventions.Insert(0, new GlobalRoutePrefixFilter(new RouteAttribute(RoutePrefix.Name)));
-            })
-            //全局配置Json序列化处理
+                    //// 全局异常过滤
+                    o.Filters.Add(typeof(GlobalExceptionsFilter));
+                    //// 全局路由权限公约
+                    ////o.Conventions.Insert(0, new GlobalRouteAuthorizeConvention());
+                    //// 全局路由前缀，统一修改路由
+                    //o.Conventions.Insert(0, new GlobalRoutePrefixFilter(new RouteAttribute(RoutePrefix.Name)));
+                })
+             //全局配置Json序列化处理
              .AddNewtonsoftJson(options =>
             {
-                ////忽略循环引用
-                //options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-                ////不使用驼峰样式的key
-                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
-                //设置时间格式
-                options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
-                //options.SerializerSettings.Converters.
-            });
+                    ////忽略循环引用
+                    //options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                    ////不使用驼峰样式的key
+                    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                    //设置时间格式
+                    options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+                    //options.SerializerSettings.Converters.
+                });
 
         }
 
@@ -76,15 +103,16 @@ namespace CJJ_BlogApiV3
             app.UseAuthorization();
             app.UseSwagger();
 
-            QuartzService.StartJob<QuartzJob>();
+            //QuartzService.StartJob<QuartzJob>();
 
             //启用中间件服务对swagger-ui，指定Swagger JSON终结点
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "CJJ_BlogApiV3");
-                //加上后，访问地址：https://localhost:44388
-                //c.RoutePrefix = "https://localhost:44388/swagger";//访问地址：https://localhost:49382/swagger      
-            });
+                c.RoutePrefix = string.Empty;
+                    //加上后，访问地址：https://localhost:44388
+                    //c.RoutePrefix = "https://localhost:44388/swagger";//访问地址：https://localhost:49382/swagger      
+                });
             //app.UseLog4net();
 
             app.UseEndpoints(endpoints =>

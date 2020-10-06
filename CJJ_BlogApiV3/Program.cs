@@ -17,7 +17,22 @@ namespace CJJ_BlogApiV3
     {
         public static void Main(string[] args)
         {
+            Test();
             CreateHostBuilder(args).Build().Run();
+        }
+        public static void Test()
+        {
+            List<string> model = new List<string>
+            {
+                "20202000123",
+                "20200600222",
+                "20201400235","2020660124"
+            };
+            var tt=model.GroupBy(x=>x.Substring(6,2));
+            foreach(var item in tt)
+            {
+                Console.WriteLine(string.Join(",", item));
+            }
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

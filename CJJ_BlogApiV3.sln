@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CJJ_BlogApiV3.Model", "CJJ_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CJJ_BlogApiV3.Repository", "CJJ_BlogApiV3.Repository\CJJ_BlogApiV3.Repository.csproj", "{50BE386E-678E-468D-9034-D279E7D919BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CJJ_BlogApiV3", "CJJ_BlogApiV3\CJJ_BlogApiV3.csproj", "{5C42C0D7-36BF-4422-9932-DDFDAB1453A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CJJ_BlogApiV3", "CJJ_BlogApiV3\CJJ_BlogApiV3.csproj", "{5C42C0D7-36BF-4422-9932-DDFDAB1453A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CJJ_BlogApiV3.LogicTests1", "CJJ_BlogApiV3.LogicTests1\CJJ_BlogApiV3.LogicTests1.csproj", "{2E9EE720-604A-4AF2-BC28-8B21CAF7CE89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{5C42C0D7-36BF-4422-9932-DDFDAB1453A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C42C0D7-36BF-4422-9932-DDFDAB1453A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C42C0D7-36BF-4422-9932-DDFDAB1453A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E9EE720-604A-4AF2-BC28-8B21CAF7CE89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E9EE720-604A-4AF2-BC28-8B21CAF7CE89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E9EE720-604A-4AF2-BC28-8B21CAF7CE89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E9EE720-604A-4AF2-BC28-8B21CAF7CE89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
