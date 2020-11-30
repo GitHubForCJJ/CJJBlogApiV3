@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CJJ.log4netCore\CJJ.log4netCore.csproj" />
+    <ProjectReference Include="..\CJJ.Redis\CJJ.Redis.csproj" />
     <ProjectReference Include="..\CJJ_BlogApiV3.Logic\CJJ_BlogApiV3.Logic.csproj" />
     <ProjectReference Include="..\CJJ_BlogApiV3.Model\CJJ_BlogApiV3.Model.csproj" />
     <ProjectReference Include="..\CJJ_BlogApiV3.Repository\CJJ_BlogApiV3.Repository.csproj" />

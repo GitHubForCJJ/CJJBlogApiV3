@@ -12,6 +12,9 @@ using Go.StandardUtility.Common.Extension;
 
 namespace CJJ_BlogApiV3.Logic
 {
+    /// <summary>
+    /// h5博客相关
+    /// </summary>
     public class BloginfoLogic : IBloginfoLogic
     {
         private readonly IBloginfoRepository bloginfoRepository = null;

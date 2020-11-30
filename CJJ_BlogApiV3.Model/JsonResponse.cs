@@ -5,7 +5,7 @@ using System.Text;
 namespace CJJ_BlogApiV3.Model
 {
     /// <summary>
-    /// 返回类
+    /// 返回基础类
     /// </summary>
     public class JsonResponse
     {
@@ -15,6 +15,23 @@ namespace CJJ_BlogApiV3.Model
         public int Code { get; set; }
         public int Count { get; set; }
         public string Msg { get; set; }
-        public object Data { get; set; }
+    }
+    /// <summary>
+    /// 单个返回实体
+    /// </summary>
+    public class JsonResponse<T> : JsonResponse
+    {
+        public T Data { get; set; }
+    }
+    /// <summary>
+    /// list数据
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class JsonListResponse<T> : JsonResponse
+    {
+        /// <summary>
+        /// list数据
+        /// </summary>
+        public List<T> Data { get; set; }
     }
 }

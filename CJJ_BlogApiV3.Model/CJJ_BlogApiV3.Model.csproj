@@ -4,6 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>F:\CJJ\CJJBlogApiV3\CJJ_BlogApiV3\CJJ_BlogApiV3.Model.xml</DocumentationFile>
+    <OutputPath>F:\CJJ\CJJBlogApiV3\CJJ_BlogApiV3\</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.0.0" />
     <PackageReference Include="sqlSugarCore" Version="5.0.0.15" />

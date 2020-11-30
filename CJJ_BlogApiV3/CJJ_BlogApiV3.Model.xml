@@ -1,0 +1,1189 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CJJ_BlogApiV3.Model</name>
+    </assembly>
+    <members>
+        <member name="M:CJJ_BlogApiV3.Model.AutoMapperExt.MapTo``1(System.Object)">
+            <summary>
+             类型映射
+            </summary>
+        </member>
+        <member name="M:CJJ_BlogApiV3.Model.AutoMapperExt.MapToList``1(System.Collections.IEnumerable)">
+            <summary>
+            集合列表类型映射
+            </summary>
+        </member>
+        <member name="M:CJJ_BlogApiV3.Model.AutoMapperExt.MapToList``2(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            集合列表类型映射
+            </summary>
+        </member>
+        <member name="M:CJJ_BlogApiV3.Model.AutoMapperExt.MapTo``2(``0,``1)">
+            <summary>
+            类型映射
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.Access">
+            <summary>
+             访问记录表
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Access.IpAddress">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Access.BlogNum">
+            <summary>
+            博客编号
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Access.BlogName">
+            <summary>
+            博客名称
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Access.AccessType">
+            <summary>
+            查看类型 0首页 1单个博客
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.ArticlePraise">
+            <summary>
+            文章点赞
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.ArticlePraise.MemberId">
+            <summary>
+            会员id
+            </summary> 
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.ArticlePraise.BlogNum">
+            <summary>
+            文章编号
+            </summary>    
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.ArticlePraise.IpAddress">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.Blogcontent">
+            <summary>
+            博客内容
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Blogcontent.BloginfoNum">
+            <summary>
+            基本信息编号
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Blogcontent.Content">
+            <summary>
+            博客内容  url编码处理
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo">
+            <summary>
+            博客信息表
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo.BlogNum">
+            <summary>
+            博客编号
+            </summary>        
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo.Title">
+            <summary>
+            标题
+            </summary>       
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo.Type">
+            <summary>
+            类型
+            </summary>      
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo.IsTop">
+            <summary>
+            是否置顶
+            </summary>       
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo.IsPrivate">
+            <summary>
+            是否私密不显示
+            </summary>      
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo.IsOriginal">
+            <summary>
+            是否原创
+            </summary>     
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo.Vesion">
+            <summary>
+            版本号，乐观锁
+            </summary>       
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo.Blogimg">
+            <summary>
+            blog图片
+            </summary>   
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo.Sorc">
+            <summary>
+            序号
+            </summary>      
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo.Start">
+            <summary>
+            点赞数
+            </summary>      
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo.Views">
+            <summary>
+            浏览次数
+            </summary>        
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Bloginfo.Comments">
+            <summary>
+            评论数
+            </summary>       
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.Category">
+            <summary>
+            博客分类
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Category.FatherId">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Category.Name">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Category.Description">
+            <summary>
+            是否私密不显示
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Category.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Comment.Memberid">
+            <summary>
+            会员id
+            </summary>       
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Comment.MemberName">
+            <summary>
+            会员名称
+            </summary>     
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Comment.BlogNum">
+            <summary>
+            Blogid
+            </summary>       
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Comment.Commentid">
+            <summary>
+            会话id
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Comment.ToMemberid">
+            <summary>
+            评论谁的id  为空指的是自己写的新评论  不为空则是 评论别人的评论
+            </summary>      
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Comment.Content">
+            <summary>
+            内容
+            </summary>     
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Comment.Avatar">
+            <summary>
+            头像
+            </summary>      
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel">
+            <summary>
+            数据库基础信息
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.KID">
+            <summary>
+            编号,数据库自增本表唯一
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.States">
+            <summary>
+            状态,0正常数据 1已禁用
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.IsDeleted">
+            <summary>
+            删除,0未删除 1已删除
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.CreateUserId">
+            <summary>
+            添加用户
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.CreateUserName">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.UpdateUserId">
+            <summary>
+            修改用户Id
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.UpdateUserName">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.Extend1">
+            <summary>
+            扩展1,
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.Extend2">
+            <summary>
+            扩展2,
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.Extend3">
+            <summary>
+            扩展3,
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.Extend4">
+            <summary>
+            扩展4,
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.Extend5">
+            <summary>
+            扩展5,
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.DbBaseModel.Extend6">
+            <summary>
+            扩展6,
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.Employee">
+            <summary>
+            员工
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Employee.UserName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Employee.UserAcount">
+            <summary>
+            登录账号
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Employee.UserPassword">
+            <summary>
+            密码MD5
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Employee.UserNikeName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Employee.IsAdmin">
+            <summary>
+            是否为管理员0否，1是
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Employee.LastUpTime">
+            <summary>
+            上次重置时间
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Employee.CompanyId">
+            <summary>
+            所属渠道ID,根据不同的企业类型对应不同的渠道ID
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Employee.CompanyType">
+            <summary>
+            企业类型,1平台 2高校 3预留
+            </summary>	
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.KID">
+            <summary>
+            序号,ID自增编号,本表唯一
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.States">
+            <summary>
+            数据状态,0启用 1禁用
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.Deleted">
+            <summary>
+            状态,0未删除 1已删除
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.CreateUserId">
+            <summary>
+            添加用户
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.CreateUserName">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.TableName">
+            <summary>
+            数据对象,可以存储表名
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.TablePriKeyField">
+            <summary>
+            对象主键,操作对象的主键字段名称 默认KID
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.TablePriKeyValue">
+            <summary>
+            主键值,操作对象数据的值
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.IpAddr">
+            <summary>
+            操作者IP地址
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.ReqData">
+            <summary>
+            请求数据,方便查看对象 可以为Json对象
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.ResOldData">
+            <summary>
+            操作前数据内容,Json对象
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.ResResult">
+            <summary>
+            操作后数据结果,Json对象,操作前后 数据记录
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.OperType">
+            <summary>
+            日志类型,1添加 2编辑 3修改 4常规日志
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.OperResult">
+            <summary>
+            操作结果,0成功 1失败 
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Fd_sys_operationlog.LogContent">
+            <summary>
+            日志内容
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.HotNew">
+            <summary>
+            热点显示
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.HotNew.Url">
+            <summary>
+            url地址
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.HotNew.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken">
+            <summary>
+            登录token  暂时这样
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.KID">
+            <summary>
+            编号,数据库自增本表唯一
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.States">
+            <summary>
+            状态,0正常数据 1已禁用
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.IsDeleted">
+            <summary>
+            删除,0未删除 1已删除
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.Token">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.TokenExpiration">
+            <summary>
+            Token有效期到期时间
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.LoginUserId">
+            <summary>
+            登录者id
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.LoginUserAccount">
+            <summary>
+            登录人的账号
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.LoginUserType">
+            <summary>
+            登录账户类型
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.IpAddr">
+            <summary>
+            登录设备ip
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.PlatForm">
+            <summary>
+            登录平台
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.IsLogOut">
+            <summary>
+            是否退出登录0未退，1退出
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Logintoken.LoginResult">
+            <summary>
+            登录结果
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.Media">
+            <summary>
+            Media
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.KID">
+            <summary>
+            编号,数据库自增本表唯一
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.States">
+            <summary>
+            状态,0正常数据 1已禁用
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.IsDeleted">
+            <summary>
+            删除,0未删除 1已删除
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.CreateUserId">
+            <summary>
+            添加用户
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.CreateUserName">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.UpdateUserId">
+            <summary>
+            修改用户Id
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.UpdateUserName">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.Extend1">
+            <summary>
+            扩展1,
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.Extend2">
+            <summary>
+            扩展2,
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.Extend3">
+            <summary>
+            扩展3,
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.Extend4">
+            <summary>
+            扩展4,
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.Extend5">
+            <summary>
+            扩展5,
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.Extend6">
+            <summary>
+            扩展6,
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.Url">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Media.Type">
+            <summary>
+            类型,0图片，1视频
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.Member">
+            <summary>
+            会员
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Member.UserName">
+            <summary>
+            扩展6,
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Member.UserAccount">
+            <summary>
+            email地址  后期加其它登陆
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Member.UserPassword">
+            <summary>
+            密码MD5 大写
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Member.UserIcon">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.Sysmenu">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysmenu.Menuname">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysmenu.Menuremark">
+            <summary>
+            菜单备注
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysmenu.MenuUrl">
+            <summary>
+            菜单连接
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysmenu.Menuicon">
+            <summary>
+            菜单icon
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysmenu.Menusort">
+            <summary>
+            菜单显示顺序
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysmenu.Fatherid">
+            <summary>
+            上级id
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.Sysrole">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysrole.Rolename">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysrole.Roleremark">
+            <summary>
+            角色备注
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysrole.MenuList">
+            <summary>
+            菜单ID，逗号分隔
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole">
+            <summary>
+            员工角色关联
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole.KID">
+            <summary>
+            编号,数据库自增本表唯一
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole.States">
+            <summary>
+            状态,0正常数据 1已禁用
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole.IsDeleted">
+            <summary>
+            删除,0未删除 1已删除
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole.CreateUserId">
+            <summary>
+            添加用户
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole.CreateUserName">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole.UpdateUserId">
+            <summary>
+            修改用户Id
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole.UpdateUserName">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole.Userid">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole.Roleid">
+            <summary>
+            角色id
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.Sysuserrole.UserType">
+            <summary>
+            0员工，1是会员
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.DbBaseModel.WxUser">
+            <summary>
+            微信用户
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.WxUser.Province">
+            <summary>
+            用户个人资料填写的省份
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.WxUser.HeadImgUrl">
+            <summary>
+            用户头像，最后一个数值代表正方形头像大小（有0、46、64、96、132数值可选，0代表640*640正方形头像），用户没有头像时该项为空。若用户更换头像，原有头像URL将失效。
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.WxUser.Privilege">
+            <summary>
+            用户特权信息，json 数组，如微信沃卡用户为（chinaunicom
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.DbBaseModel.WxUser.Unionid">
+            <summary>
+            只有在用户将公众号绑定到微信开放平台帐号后，才会出现该字段。
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.GoSqlFunc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CJJ_BlogApiV3.Model.GoSqlFunc.GetFlagsEnumExtension">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CJJ_BlogApiV3.Model.GoSqlFunc.BitAnd(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="val"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CJJ_BlogApiV3.Model.GoSqlFunc.BitOr(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="val"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.JsonRequest">
+            <summary>
+            请求类
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.JsonRequest.App">
+            <summary>
+            接口请求类型
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.JsonRequest.Data">
+            <summary>
+            请求数据
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.JsonRequest.Md5">
+            <summary>
+            校验值
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.JsonRequest.Timestamp">
+            <summary>
+            请求时间
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.JsonRequest.Token">
+            <summary>
+            登录token
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.JsonRequest.Page">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.JsonRequest.Limit">
+            <summary>
+            每页条数
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.JsonResponse">
+            <summary>
+            返回基础类
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.JsonResponse.Code">
+            <summary>
+            0成功 其它失败
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.JsonResponse`1">
+            <summary>
+            单个返回实体
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.JsonListResponse`1">
+            <summary>
+            list数据
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.JsonListResponse`1.Data">
+            <summary>
+            list数据
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.Mapper.BloginfoView.BlogNum">
+            <summary>
+            博客编号
+            </summary>        
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.Mapper.BloginfoView.Title">
+            <summary>
+            标题
+            </summary>       
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.Mapper.BloginfoView.KID">
+            <summary>
+            编号,数据库自增本表唯一
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.Result">
+            <summary>
+            基础返回模型
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.Result`1">
+            <summary>
+            拓展返回
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.ReuqestModel.BaseViewModel">
+            <summary>
+            基本查询model
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.ReuqestModel.BaseViewModel.KID">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.ReuqestModel.BaseViewModel.Page">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.ReuqestModel.BaseViewModel.Limit">
+            <summary>
+            页码
+            </summary>
+            <value>
+            The limit.
+            </value>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.ReuqestModel.BaseViewModel.Num">
+            <summary>
+            Gets or sets the number.
+            </summary>
+            <value>
+            The number.
+            </value>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.View.BloginfoView">
+            <summary>
+            博客view
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.BloginfoView.Title">
+            <summary>
+            title
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.BloginfoView.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.BloginfoView.IsTop">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.BloginfoView.IsPrivate">
+            <summary>
+            是否私密不显示
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.BloginfoView.Vesion">
+            <summary>
+            版本号，乐观锁
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.BloginfoView.IsOriginal">
+            <summary>
+            是否原创
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.BloginfoView.Start">
+            <summary>
+            是否原创
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.BloginfoView.Comments">
+            <summary>
+            是否原创
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.BloginfoView.Views">
+            <summary>
+            是否原创
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.BloginfoView.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.BloginfoView.BlogNum">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.CommentView.Replys">
+            <summary>
+            回复
+            </summary>
+            <value>
+            The replys.
+            </value>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.View.OperLogType">
+            <summary>
+            日志类型,1添加 2编辑 3删除 4常规日志
+            </summary>
+        </member>
+        <member name="F:CJJ_BlogApiV3.Model.View.OperLogType.添加">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:CJJ_BlogApiV3.Model.View.OperLogType.编辑">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:CJJ_BlogApiV3.Model.View.OperLogType.删除">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:CJJ_BlogApiV3.Model.View.OperLogType.常规日志">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.View.OpertionUser">
+            <summary>
+            操作日志模板
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.OpertionUser.UserId">
+            <summary>
+            操作者账户
+            </summary>
+            <value>
+            The name of the user.
+            </value>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.OpertionUser.UserName">
+            <summary>
+            操作者姓名
+            </summary>
+            <value>
+            The name of the user.
+            </value>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.OpertionUser.UserClientIp">
+            <summary>
+            操作者客户端Ip
+            </summary>
+            <value>
+            The user client ip.
+            </value>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.View.PrenextView">
+            <summary>
+            上下篇
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.View.PrenextViewItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.View.SysLoginUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.SysLoginUser.TokenExpiration">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.SysLoginUser.Model">
+            <summary>
+            员工对象
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.SysLoginUser.MemberModel">
+            <summary>
+            员工对象
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.SysLoginUser.UserAuthorMenu">
+            <summary>
+            用户权限列表
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.SysLoginUser.DataIsEncrypt">
+            <summary>
+            是否加密
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.SysLoginUser.IsAdmin">
+            <summary>
+            是否是管理员
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:CJJ_BlogApiV3.Model.View.UserAuthorMenu.UserMenuList" -->
+        <member name="M:CJJ_BlogApiV3.Model.View.UserAuthorMenu.GetMenuByNode(System.String,System.Collections.Generic.List{CJJ_BlogApiV3.Model.View.zTreeModel})">
+            <summary>
+            Gets the menu by node.
+            </summary>
+            <param name="pId">The p identifier.</param>
+            <param name="_allmenu">The allmenu.</param>
+            <returns></returns>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.UserAuthorMenu.UserMenuByLevel">
+            <summary>
+            用户菜单列表 递归嵌套方式呈现
+            </summary>
+            <value>
+            The menu list.
+            </value>
+        </member>
+        <member name="T:CJJ_BlogApiV3.Model.View.zTreeModel">
+            <summary>
+            Class zTreeModel.
+            </summary>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.zTreeModel.id">
+            <summary>
+            当前节点Id
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.zTreeModel.pId">
+            <summary>
+            上级节点Id
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.zTreeModel.name">
+            <summary>
+            菜单名称
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.zTreeModel.url">
+            <summary>
+            Url地址
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.zTreeModel.ico">
+            <summary>
+            Ico图标
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.zTreeModel.sort">
+            <summary>
+            排序 值越大越前
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.zTreeModel.open">
+            <summary>
+            是否展开 true 展开 false不展开
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.zTreeModel.schecked">
+            <summary>
+            是否勾选 true 展开 false不展开
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:CJJ_BlogApiV3.Model.View.zTreeModel.subMenuLst">
+            <summary>
+            子菜单列表
+            </summary>
+            <value>
+            The sub menu.
+            </value>
+        </member>
+        <member name="P:CJJ.Blog.Service.Model.View.Sysmenuview.KID">
+            <summary>
+            编号,数据库自增本表唯一
+            </summary>
+        </member>
+        <member name="P:CJJ.Blog.Service.Model.View.Sysmenuview.Menuname">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:CJJ.Blog.Service.Model.View.Sysmenuview.MenuUrl">
+            <summary>
+            菜单连接
+            </summary>
+        </member>
+        <member name="P:CJJ.Blog.Service.Model.View.Sysmenuview.Menuicon">
+            <summary>
+            菜单icon
+            </summary>
+        </member>
+        <member name="P:CJJ.Blog.Service.Model.View.Sysmenuview.Menusort">
+            <summary>
+            菜单显示顺序
+            </summary>
+        </member>
+        <member name="P:CJJ.Blog.Service.Model.View.Sysmenuview.Fatherid">
+            <summary>
+            上级id
+            </summary>
+        </member>
+    </members>
+</doc>

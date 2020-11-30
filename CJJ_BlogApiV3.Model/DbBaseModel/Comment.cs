@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CJJ_BlogApiV3.Model.DbBaseModel
 {
-    class Comment
+    public class Comment
     {
         /// <summary>
         /// 会员id

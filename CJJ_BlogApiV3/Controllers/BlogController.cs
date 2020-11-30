@@ -37,25 +37,18 @@ namespace CJJ_BlogApiV3New.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<JsonResponse> GetList([FromBody] BaseViewModel model)
+        public async Task<JsonListResponse<BloginfoView>> GetListBlog([FromBody] BaseViewModel model)
         {
             try
             {
-                //LogManager.Info("GetList进入22  info");
-                //LogManager.Error("GetList进入  errorinfo");
-                logger.LogDebug("debug message");
-                logger.LogInformation("Seeding database...");
                 var list = await bloginfoLogic.GetListBloginfo(model);
                 var dlist = list?.Data.MapToList<BloginfoView>();
-                //test aotumapper
-                return new JsonResponse { Code = 0, Data = list };
+                return new JsonListResponse<BloginfoView> { Code = 0, Data = dlist };
             }
             catch (Exception e)
             {
-                logger.LogError(e, "BlogController/GetList");
-                //Log.Error(e, "BlogController/GetList");
-                LogManager.Error("BlogController/GetList" + e.Message, e);
-                return new JsonResponse { Code = 1, Msg = "程序错误" + e.Message };
+                logger.LogError(e, "BlogController/GetListBlog");
+                return new JsonListResponse<BloginfoView> { Code = 1, Msg = "程序错误" + e.Message };
             }
         }
 

@@ -1,0 +1,48 @@
+﻿
+using CJJ.Blog.Service.Model.View;
+using CJJ_BlogApiV3.Model.DbBaseModel;
+using System.Runtime.Serialization;
+
+namespace CJJ_BlogApiV3.Model.View
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    [DataContract]
+    public class SysLoginUser : Result
+    {
+        [DataMember]
+        public string Token { get; set; }
+        /// <summary>
+        /// 过期时间
+        /// </summary>
+        [DataMember]
+        public string TokenExpiration { get; set; }
+        /// <summary>
+        /// 员工对象
+        /// </summary>
+        [DataMember]
+        public Employee Model { get; set; }
+        /// <summary>
+        /// 员工对象
+        /// </summary>
+        [DataMember]
+        public Member MemberModel { get; set; }
+        /// <summary>
+        /// 用户权限列表
+        /// </summary>
+        [DataMember]
+        public UserAuthorMenu UserAuthorMenu { get; set; }
+        /// <summary>
+        /// 是否加密
+        /// </summary>
+        [DataMember]
+        public bool DataIsEncrypt { get; set; }
+        /// <summary>
+        /// 是否是管理员
+        /// </summary>
+        [DataMember]
+        public bool IsAdmin { get; set; }
+
+    }
+}

@@ -5,15 +5,21 @@ using System.Text;
 namespace CJJ_BlogApiV3.Model.ReuqestModel
 {
     /// <summary>
-    /// 
+    /// 基本查询model
     /// </summary>
     public class BaseViewModel
     {
+        /// <summary>
+        /// 主键
+        /// </summary>
         public int KID { get; set; }
+        /// <summary>
+        /// 当前页
+        /// </summary>
 
         public int Page { get; set; }
         /// <summary>
-        /// Gets or sets the limit.
+        /// 页码
         /// </summary>
         /// <value>
         /// The limit.
