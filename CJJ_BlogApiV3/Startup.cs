@@ -92,7 +92,7 @@ namespace CJJ_BlogApiV3
             string _instanceName = section.GetSection("InstanceName").Value;
             //Ä¬ÈÏÊý¾Ý¿â 
             int _defaultDB = int.Parse(section.GetSection("DefaultDB").Value ?? "0");
-            services.AddRedisExtension(_connectionString, _instanceName, _defaultDB);
+            //services.AddRedisExtension(_connectionString, _instanceName, _defaultDB);
             #endregion
 
             services.AddControllers(o =>

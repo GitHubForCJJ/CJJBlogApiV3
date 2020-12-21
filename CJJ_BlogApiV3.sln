@@ -21,8 +21,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CJJ_BlogApiV3", "CJJ_BlogAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CJJ_BlogApiV3.LogicTests1", "CJJ_BlogApiV3.LogicTests1\CJJ_BlogApiV3.LogicTests1.csproj", "{2E9EE720-604A-4AF2-BC28-8B21CAF7CE89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CJJ.Redis", "CJJ.Redis\CJJ.Redis.csproj", "{A4339B61-492F-47BF-81BA-5D5184B84A10}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,17 +59,12 @@ Global
 		{2E9EE720-604A-4AF2-BC28-8B21CAF7CE89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E9EE720-604A-4AF2-BC28-8B21CAF7CE89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E9EE720-604A-4AF2-BC28-8B21CAF7CE89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A4339B61-492F-47BF-81BA-5D5184B84A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A4339B61-492F-47BF-81BA-5D5184B84A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A4339B61-492F-47BF-81BA-5D5184B84A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A4339B61-492F-47BF-81BA-5D5184B84A10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{76706013-BF9F-4C84-9E99-8C4A80E07E8A} = {3D4DA85A-A1A8-4B87-81EA-2260F8E0B609}
-		{A4339B61-492F-47BF-81BA-5D5184B84A10} = {3D4DA85A-A1A8-4B87-81EA-2260F8E0B609}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E229B616-05C9-4082-AB89-4EF0C69B07D4}
