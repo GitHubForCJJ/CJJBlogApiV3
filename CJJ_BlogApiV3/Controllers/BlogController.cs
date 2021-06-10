@@ -26,7 +26,6 @@ namespace CJJ_BlogApiV3New.Controllers
     {
         private readonly IBloginfoLogic bloginfoLogic = null;
         private readonly ILogger<BlogController> logger;
-
         public BlogController(IBloginfoLogic bloginfoLogic,ILogger<BlogController> _logger)
         {
             this.bloginfoLogic = bloginfoLogic;
